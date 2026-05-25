@@ -1,6 +1,12 @@
 {
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/index.html" }
+    "functions": {
+      "app/server.ts": {
+        "runtime": "nodejs18.x"
+      }
+    },
+    "routes": [
+      { "src": "/_vercel/insights/(.*)", "dest": "/_vercel/insights/$1" },
+      { "src": "/(.*)", "dest": "/api/server" }
     ]
   }
   
